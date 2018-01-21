@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="null">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="网站关键字">
+  <meta name="description" content="网站简介">
+  
+  <title>七号当铺</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  
+    <style type="text/css">
+        html{
+            font-family: sans-serif;
+            font-weight: 300;
+        }
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: url(/fonts/MaterialIcons-Regular.eot);
+            src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+            url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+            url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+        }
+    </style>
+</head>
+<body>
+<a href="#" data-activates="slide-out"  class="button-collapse"><div class="nav-btn"><i class="material-icons">list</i></div></a>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav" >
+    <div class="nav-header"  style="background-image: url(/images/header-bg_dva.jpg);background-color:#26A69A">
+    <div class="header-box"><img src="/images/faviconmy.jpg" ondragstart="return false;"></div>
+    <p>印第安老斑鸠</p>
+    <div class="nav-link">
+        
+        
+        <a  href="https://github.com/IndianOldTurtledove" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        
+        
+        <a href="https://www.zhihu.com/people/he-zhi-yu-shu/activities" target="_blank"> <div class="link-box zhihu"></div></a>
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class='no-result'>无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a  class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2018/01/">January 2018<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2017/06/">June 2017<span class="archive-count">1</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<li class="nav-list dropdown-btn">
+    <a   class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">dashboard</i></div><p>分类</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    <article id="post">
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-19.png)" >
+  <h2>Linux VPS基本常识 - KVM与OpenVZ架构的区别</h2>
+    
+  <p>作者:印第安老斑鸠 &nbsp&nbsp 发布于:<time datetime="2018-01-21T10:23:41.000Z">
+          2018-01-21
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <h3 id="第一、OPENVZ架构普及知识"><a href="#第一、OPENVZ架构普及知识" class="headerlink" title="第一、OPENVZ架构普及知识"></a>第一、OPENVZ架构普及知识</h3><p>OpenVZ是基于Linux内核和作业系统的操作系统级虚拟化技术。OpenVZ允许物理服务器运行多个操作系统，被称虚拟专用服务器（VPS，Virtual Private Server）或虚拟环境（VE, Virtual Environment）。</p>
+<p>OpenVZ软件同时为用户提供工具，协助自动化管理虚拟服务器。基于模板的应用程序部署可以在几分钟内用简单的方法创建新的虚拟服务器并投入使用，而且与其他的虚拟化技术相比，OpenVZ可以在每CPU上运行几倍于其他虚拟化服务器技术的虚拟化服务器。</p>
+<p>OpenVZ可以在单个物理服务器上创建多个隔离的虚拟专用服务器(VPS)并以最大效率共享硬件和管理资源。每个VPS的运行和独立服务器完全一致，因其自身的用户、应用程序都可以独立重启，它拥有根访问权限、用户、IP地址、内存、处理器、文件、应用服务、系统库文件和配置文件等。拥有轻量级处理损耗和高效设计的OpenVZ是运行应用服务和实时数据生产型服务器虚拟化的最佳选择。</p>
+<h3 id="第二、KVM架构普及知识"><a href="#第二、KVM架构普及知识" class="headerlink" title="第二、KVM架构普及知识"></a>第二、KVM架构普及知识</h3><p>KVM作为内核的一个模块，来提供虚拟化功能。如果系统需要虚拟化功能，则KVM模块可以被Linux内核按需动态加载到内存运行。如果不需要的KVM功能，可以动态卸载该模块。</p>
+<p>KVM是嵌入在Linux操作系统标准内核中的一个虚拟化模块，它能够将一个Linux标准内核转换成为一个VMM，嵌有KVM模块的Linux标准内核可以支持通过kvm tools来进行加载的GuestOS。所以在这样的操作系统平台下，计算机物理硬件层上直接就是VMM虚拟化层，而没有独立出来的HostOS操作系统层。</p>
+<p>kvm 是完全虚拟的，所以不分 pv 和 hvm 的区别，所有的 kvm 类型的虚拟技术都可以装各种 linux 的发行版和各种 win 的发行版，不管供应商在主页有没有写明是否支持 win，只要你配置够 win 运行，那就肯定可以装的上去，只是方法的问题而已。</p>
+<h3 id="第三、OPENVZ-与-KVM-缺点比较"><a href="#第三、OPENVZ-与-KVM-缺点比较" class="headerlink" title="第三、OPENVZ 与 KVM 缺点比较"></a>第三、OPENVZ 与 KVM 缺点比较</h3><p>OPENVZ - 超卖，没有不超卖的，导致各种石头盘，钻石盘。连带的 cpu 也被过度分割导致性能升值不如其标明的 1/10。再有就是内存，基本上 OpenVZ 技术没有独占的，都是共享，别人多了你就少了，而且这种技术最大的劣势就是内存下来后直接就是当机。</p>
+<p>KVM - KVM 资源占用也看周边邻居的资源使用情况，如果折腾的用户太多，也会导致自己的不稳定。简单一点，比如搬瓦工商家才开始销售KVM机器，我们可以看到稳定性还是不错的，就看以后是否有大量的折腾用户进来，如果是，那会给我们有不小的影响。</p>
+<p>总结，无论是OPENVZ还是KVM架构，我们还需要看商家的技术，以及管理，如果控制的好，还是不错的机器，如果乱折腾不管理，那再好的机器、配置都是白搭。再过一段时间，测试对比看看OPENVZ与KVM两种架构的机器之间的速度和稳定区别。</p>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/2017/06/16/两步搭建自己的私人VPN/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一、OPENVZ架构普及知识"><span class="post-toc-number">1.</span> <span class="post-toc-text">第一、OPENVZ架构普及知识</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第二、KVM架构普及知识"><span class="post-toc-number">2.</span> <span class="post-toc-text">第二、KVM架构普及知识</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第三、OPENVZ-与-KVM-缺点比较"><span class="post-toc-number">3.</span> <span class="post-toc-text">第三、OPENVZ 与 KVM 缺点比较</span></a></li></ol>
+</div>
+<div class="post-back"><i class="material-icons">arrow_back</i></div>
+
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p style="line-height: 45px">Copyright ©  2017  七号当铺</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    lazy();
+    links();
+    NProgress.start();
+    NProgress.done();
+</script>
+
+
+</body>
+</html>
